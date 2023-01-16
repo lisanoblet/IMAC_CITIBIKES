@@ -1,0 +1,60 @@
+<template>
+  <div id="homepage">
+    <!-- <img alt="Vue logo" src="./assets/bike.png"> -->
+    <form id="form">
+      <input type="search" id="search_bar_homepage" placeholder="Search a city, station...">
+      <button>Search</button>
+    </form>
+
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'SearchBar',
+
+  }
+</script>
+
+<style scoped>
+
+#homepage{
+  margin-left: 27vw;
+
+}
+
+#search_bar_homepage{
+  width: 40vw;
+  height: 5vh;
+  border-radius: 2vw;
+  background-color: rgb(238, 238, 238);
+  border: 0;
+  
+  padding-left: 2vw;
+}
+
+button{
+  background-color: #ff8c6d;
+  width: 5vw;
+  height: 5vh;
+  margin: 1vw;
+  border-radius: 2vw;
+  box-shadow: 2px 2px 10px rgb(0 0 0 / 0.2);
+  font-size: 1vw;
+  color: white;
+  border: 0;
+  /*font-weight: 200;*/
+}
+
+button:hover{
+  background-color: aliceblue;
+}
+
+::placeholder{
+
+
+}
+</style>
+
+
+<!-- utiliser scoped comme mot clé pour éviter que tout le site soit impacté  -->

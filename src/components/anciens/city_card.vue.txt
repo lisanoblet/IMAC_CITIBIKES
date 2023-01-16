@@ -1,0 +1,49 @@
+<template>
+
+  <div id="city_card">
+
+    <h3>Nom d'une ville, pays</h3>
+    <p>Tellement de vélos dispos</p>
+    <p>whahhh des slots incroyable </p>
+    <p>Nombre de stations </p>
+    
+  </div>
+
+</template>
+
+<script>
+  export default {
+    name: 'CityCard',
+    props: {
+
+    }
+  }
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  * {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #city_card {
+    background-color: rgb(199, 255, 237);
+    width: 30vw;
+    padding-bottom: 1vh;
+    padding-left: 10vw;
+    padding-top: 0.1vh;
+    border-radius: 5%;
+  }
+
+  h3 {
+    display: block;
+    text-align: left;
+    font-size: 1.5vw;
+    margin-bottom: 0.1vh;
+  }
+
+  p {
+    margin-left: 5vw;
+    font-size: 1vw;
+  }
+</style>

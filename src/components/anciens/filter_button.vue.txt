@@ -1,0 +1,48 @@
+<template>
+  <div id="filter_button">
+
+    <label for="standard-select">Sort by</label>
+    <div class="select">
+      <select id="standard-select">
+        <option value="most_bikes">Number of bikes - Most to Least</option>
+        <option value="least_bikes">Number of bikes - Least to Most</option>
+        <option value="most_bikes">Number of stations - Most to Least</option>
+        <option value="least_bikes">Number of stations - Least to Most</option>
+
+      </select>
+      <span class="focus"></span>
+    </div>
+
+  </div>
+
+</template>
+
+
+<script>
+  export default {
+    name: 'FilterButton',
+
+  }
+</script>
+
+
+<style scoped>
+  * {
+    font-family: 'Roboto', sans-serif;
+    display: block;
+  }
+
+  label {
+    padding: 1vw;
+    margin-left: 5vw;
+  }
+
+  select {
+    width: auto;
+    height: 5vh;
+  }
+
+  option {
+    outline: none;
+  }
+</style>

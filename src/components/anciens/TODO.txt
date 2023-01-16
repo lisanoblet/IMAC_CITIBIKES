@@ -1,0 +1,190 @@
+
+
+
+
+
+
+// ANCIEN CODE 
+
+// FILE stationsRepository.js
+
+
+
+
+//penser à faire une fonction que l'on exporte pas pour pouvoir traiter les données et les exploiter plus facilement 
+
+
+/*
+const getStationsData = async function(){
+    // GET request using fetch with error handling
+    // fetch("http://api.citybik.es/v2/networks/bycyklen")
+    
+    const myHeaders = new Headers({
+      'Access-Control-Allow-Origin: *'
+    })
+
+    fetch("https://velib-metropole-opendata.smoove.pro/opendata/Velib_Metropole/station_status.json", {
+      headers: myHeaders
+    })
+
+
+    
+      .then(async response => {
+        const data = await response.json();
+        console.log(data)
+        for (const station of data.stations) {
+          console.log(station.free_bikes)
+        }
+  
+        // check for error response
+        if (!response.ok) {
+          // get error message from body or default to response statusText
+          const error = (data && data.message) || response.statusText;
+          return Promise.reject(error);
+        }
+
+      })
+      .catch(error => {
+        this.errorMessage = error;
+        console.error("There was an error!", error);
+      });
+
+      
+    }
+    export{getStationsData};
+    getStationsData();
+
+    
+
+
+*/
+
+
+/*
+const getStationsData = async function(){
+  // GET request using fetch with error handling
+  return fetch("http://api.citybik.es/v2/networks/citi-bike-nyc")
+    .then(async response => {
+      //const data = await response.json();
+      //console.log(data)
+      //let test = data.network.stations;
+
+      let data = await response.json();
+      //data = data.network.stations;
+      data = data.network.stations;  
+      console.log(data)
+      //for (const station of data.stations) {
+      //  console.log(station.free_bikes)
+      //}
+      
+
+      //console.log(data)
+
+      // check for error response
+      if (!response.ok) {
+        // get error message from body or default to response statusText
+        const error = (data && data.message) || response.statusText;
+        return Promise.reject(error);
+      }
+      
+
+    })
+    .catch(error => {
+      this.errorMessage = error;
+      console.error("There was an error!", error);
+    });
+
+    
+  }
+  export{getStationsData};
+  getStationsData();
+*/
+
+
+
+
+
+
+
+
+
+/*
+export async function getStationsData() {
+  const reponse = await fetch("http://api.citybik.es/v2/networks/citi-bike-nyc")
+      .then((response)=>{
+        if (response.status == 200) {
+          return response.json();
+        } else {
+          new Error(response.statusText);
+        }
+      }).then((data) => {
+        data = data.network.stations;  
+        console.log(data)
+        return data;
+      });
+    return reponse;
+}
+*/
+
+
+
+  /*
+
+              stationsOrganizedData: function () {
+                const field = ["AZName", "ZAName"].includes(this.stationsSortType) ?
+                  "name" :
+                  "free_bikes";
+                const reversed = ["ZAName", "LMBikes"].includes(this.stationsSortType);
+
+
+                //this.stationsData.free_bikes = this.free_bikes.toString();
+                //console.log(this.free_bikes)
+
+                // const filterFunc = (a) => a.name.toLowerCase().includes(this.search.toLowerCase());
+                // let data = this.stationsData.filter(filterFunc);
+                // const comparator = function (a, b) {
+                //        if (typeof field === "string") {
+                //          return a[field].localeCompare(b[field]);
+                //        } else {
+                //          console.log(a < b)
+                //          return a < b;
+
+                //        }
+                //      };
+                //console.log(typeof(field))
+
+                
+               
+                if (field == 'name') {
+                  const comparator = (a, b) => a[field].localeCompare(b[field], undefined, {
+                    numeric: 'true'
+                  });
+                  console.log(field)
+                  data = data.sort(comparator);
+
+                } else {
+                  //data = [ 1, 5, 10, 12, 18, 2, 3, 33, 4];
+                  // data = data.sort();
+                  //const comparator = this.free_bikes;
+                  console.log(field)
+                  //console.log(data)
+                  //data = data.sort(comparator);
+
+
+                  data = data.sort((a, b) => {
+                    return a > b;
+                  });
+
+
+                  //data = data.sort();
+
+                  //data = data.slice(1, 3);
+                  //console.log(data)
+                }
+
+
+
+                if (reversed) data = data.reverse();
+                return data;
+              },
+              */
